@@ -1,25 +1,21 @@
 <?php
 
-if (!class_exists('Producto')) {
-    class Producto
-    {
-        public static function todos()
-        {
-            return db()->table('productos as p')
-                ->select('p.*', 'c.nombre as categoria')
-                ->join('categorias as c', 'c.id', '=', 'p.categoria_id')
-                ->where('p.activo', 1)
-                ->orderBy('p.nombre')
-                ->get();
-        }
+namespace App\Models;
 
-        public static function find($id)
-        {
-            return db()->table('productos as p')
-                ->select('p.*', 'c.nombre as categoria')
-                ->join('categorias as c', 'c.id', '=', 'p.categoria_id')
-                ->where('p.id', $id)
-                ->first();
-        }
+use Illuminate\Database\Eloquent\Model;
+
+class Producto extends Model
+{
+    protected $table    = 'productos';
+    protected $fillable = ['nombre', 'precio', 'usuario_id'];
+
+    public function usuario()
+    {
+        return $this->belongsTo(Usuario::class);
+    }
+
+    public function getPrecioFormateadoAttribute()
+    {
+        return formatearPrecio($this->precio);
     }
 }

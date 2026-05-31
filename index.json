@@ -1,0 +1,23 @@
+{
+    "Controllers": [
+        "MiController.php",
+        "Admin/AdminController.php"
+    ],
+    "Models": [
+        "Usuario.php",
+        "Producto.php"
+    ],
+    "Services": [
+        "PagoService.php"
+    ],
+    "views": [
+        "inicio.blade.php",
+        "usuario/perfil.blade.php"
+    ],
+    "routes": [
+        "web.php"
+    ],
+    "helpers": [
+        "helpers.php"
+    ]
+}
