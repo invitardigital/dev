@@ -18,6 +18,8 @@ Route::get('/test', function () {
 Route::get('/login', RemoteController::class)->defaults('pagina', 'auth/login');
 
 
+Route::get('/categorias', RemoteController::class)->defaults('pagina', 'categorias');
+
 /*
 // Auth
 Route::get('/login', RemoteController::class)->defaults('pagina', 'auth/login');
