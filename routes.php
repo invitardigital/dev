@@ -8,7 +8,13 @@ Route::get('/', function () {
     return 'Hola Demo 1';
 });
 
-Route::get('/login', RemoteController::class)->defaults('pagina', 'auth/login');
+
+Route::get('/login', function () {
+    return 'Holasdadsad';
+});
+
+
+//Route::get('/login', RemoteController::class)->defaults('pagina', 'auth/login');
 
 /*
 // Auth
