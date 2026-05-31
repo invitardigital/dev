@@ -6,7 +6,7 @@ use App\Http\Controllers\RemoteController;
 
 
 Route::get('/', function () {
-    return 'Hola Demo';
+    return 'Hola Demo 1';
 });
 
 
