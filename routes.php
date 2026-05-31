@@ -9,12 +9,10 @@ Route::get('/', function () {
 });
 
 
-Route::get('/login', function () {
-    return 'Holasdadsad';
-});
 
 
-//Route::get('/login', RemoteController::class)->defaults('pagina', 'auth/login');
+
+Route::get('/login', RemoteController::class)->defaults('pagina', 'auth/login');
 
 /*
 // Auth
