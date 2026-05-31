@@ -5,7 +5,7 @@
 
 
 Route::get('/', function () {
-    return 'FFFFFFFF';
+    return 'LAMADA';
 });
 
 
