@@ -14,6 +14,7 @@ Route::get('/', function () {
 
 Route::get('/login', RemoteController::class)->defaults('pagina', 'auth/login');
 
+
 /*
 // Auth
 Route::get('/login', RemoteController::class)->defaults('pagina', 'auth/login');
