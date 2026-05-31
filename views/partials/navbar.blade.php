@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">MiApp TEST</a>
+        <a class="navbar-brand" href="{{ url('/') }}">MiApp TEST 2</a>
         <div class="navbar-nav ms-auto">
             @if(auth()->check())
                 <a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a>
